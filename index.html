@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Glitcha | Premium Clutches</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <span>GLITCHA</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart-btn" onclick="openCart()">
+        🛍 Cart
+        <span id="cartCount">0</span>
+    </button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="small-title">THE NEW COLLECTION</p>
+
+        <h1>
+            Elegance You<br>
+            <span>Carry.</span>
+        </h1>
+
+        <p class="hero-text">
+            Discover premium clutches designed to make
+            every occasion a little more special.
+        </p>
+
+        <a href="#shop" class="primary-btn">
+            Shop Collection
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <div class="feature">
+        <div>✦</div>
+        <h3>Premium Quality</h3>
+        <p>Carefully selected materials.</p>
+    </div>
+
+    <div class="feature">
+        <div>◇</div>
+        <h3>Elegant Designs</h3>
+        <p>Designed for every occasion.</p>
+    </div>
+
+    <div class="feature">
+        <div>✓</div>
+        <h3>Easy Ordering</h3>
+        <p>Order directly through WhatsApp.</p>
+    </div>
+
+</section>
+
+
+<!-- ================= SHOP ================= -->
+
+<section class="shop" id="shop">
+
+    <div class="section-heading">
+
+       <p class="small-title">OUR COLLECTION IS OFFERING YOU AT JUST 1499/-</p>
+
+        <h2>Find Your Perfect Clutch</h2>
+
+        <p>
+            Explore our collection of stylish and elegant clutches.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="shop-controls">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search clutch..."
+            oninput="displayProducts()"
+        >
+
+        <select id="categoryFilter" onchange="displayProducts()">
+
+            <option value="all">All Categories</option>
+            <option value="party">Party</option>
+            <option value="wedding">Wedding</option>
+            <option value="daily">Daily</option>
+
+        </select>
+
+    </div>
+
+
+    <!-- PRODUCTS -->
+
+    <div class="products" id="products"></div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div class="about-image">
+        <img
+            src="images/clutch1.png"
+            alt="Premium clutch"
+        >
+    </div>
+
+    <div class="about-content">
+
+        <p class="small-title">ABOUT GLITCHA</p>
+
+        <h2>
+            Style that speaks
+            without saying a word.
+        </h2>
+
+        < Glitcha brings you elegant clutches made for women
+            who love timeless fashion and modern style.
+        </p>
+
+        <p>
+            From weddings and parties to special evenings,
+            our collection is designed to complement your look.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <p class="small-title">GET IN TOUCH</p>
+
+    <h2>We'd Love To Hear From You</h2>
+
+    <p>
+        Have a question about our products or your order?
+    </p>
+
+    <a
+        href="https://wa.me/917057701595"
+        target="_blank"
+        class="whatsapp-btn"
+    >
+        💬 Chat on WhatsApp
+    </a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="logo">
+        <span>GLITCHA</span>
+    </div>
+
+    <p>
+        © 2026 GLITCHA. All rights reserved.
+    </p>
+
+</footer>
+
+
+<!-- ================= CART SIDEBAR ================= -->
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+<aside class="cart" id="cart">
+
+    <div class="cart-header">
+
+        <h2>Your Cart</h2>
+
+        <button onclick="closeCart()">×</button>
+
+    </div>
+
+
+    <div id="cartItems" class="cart-items">
+
+        <p class="empty-cart">
+            Your cart is empty.
+        </p>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="total">
+
+            <span>Total</span>
+
+            <strong id="cartTotal">
+                ₹0
+            </strong>
+
+        </div>
+
+        <button
+            class="checkout-btn"
+            onclick="openCheckout()"
+        >
+            Proceed to Order
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- ================= PRODUCT MODAL ================= -->
+
+<div class="modal-overlay" id="productModal">
+
+    <div class="product-modal">
+
+        <button
+            class="modal-close"
+            onclick="closeProductModal()"
+        >
+            ×
+        </button>
+
+        <div id="productDetails"></div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= CHECKOUT MODAL ================= -->
+
+<div class="modal-overlay" id="checkoutModal">
+
+    <div class="checkout-modal">
+
+        <button
+            class="modal-close"
+            onclick="closeCheckout()"
+        >
+            ×
+        </button>
+
+        <p class="small-title">ORDER DETAILS</p>
+
+        <h2>Complete Your Order</h2>
+
+        <form id="orderForm">
+
+            <label>
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label>
+                Mobile Number
+            </label>
+
+            <input
+                type="tel"
+                id="customerPhone"
+                placeholder="Enter mobile number"
+                required
+            >
+
+
+            <label>
+                Delivery Address
+            </label>
+
+            <textarea
+                id="customerAddress"
+                placeholder="Enter complete delivery address"
+                required
+            ></textarea>
+
+
+            <label>
+                Payment Method
+            </label>
+
+            <select id="paymentMethod">
+
+                <option value="Cash on Delivery">
+                    Cash on Delivery
+                </option>
+
+                <option value="UPI">
+                    UPI
+                </option>
+
+            </select>
+
+
+            <div class="order-summary">
+
+                <span>Order Total</span>
+
+                <strong id="checkoutTotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="place-order-btn"
+            >
+                Place Order on WhatsApp
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
