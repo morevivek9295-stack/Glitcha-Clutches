@@ -326,8 +326,8 @@ const products = [
         badge: "PREMIUM",
         image: "images/clutch31.png",
         description: "A rich wine-colored pearl clutch for weddings and festive events."
-    }, 
-    
+    },
+
     {
         id: 32,
         name: "Signature Gold Clutch",
@@ -339,6 +339,8 @@ const products = [
     }
 
 ];
+
+
 /* =====================================================
    CART
 ===================================================== */
@@ -872,7 +874,7 @@ document
 
 
         let message =
-            `*NEW ORDER - ONROOMS*%0A%0A`;
+            `*NEW ORDER - GLITCHA*%0A%0A`;
 
 
         message +=
@@ -909,7 +911,7 @@ document
             `*TOTAL: ₹${total}*%0A%0A`;
 
         message +=
-            `Thank you for shopping with ONROOMS.`;
+            `Thank you for shopping with GLITCHA.`;
 
 
         const whatsappURL =
@@ -998,8 +1000,6 @@ function showNotification(message) {
     }, 2500);
 
 }
-
-
 /* =====================================================
    CLOSE MODALS WHEN CLICKING OUTSIDE
 ===================================================== */

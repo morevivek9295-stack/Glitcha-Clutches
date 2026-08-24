@@ -232,6 +232,7 @@ select {
 .shop {
     padding: 100px 2%;
 }
+
 s
 .section-heading {
     text-align: center;
@@ -996,7 +997,6 @@ footer p {
     color: #c7a96b;
 }
 
-
 /* =========================
    NO RESULTS
 ========================= */
@@ -1150,26 +1150,14 @@ footer p {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-/* =========================
-   SLIGHTLY LARGER FONTS
-   1–2% increase
-========================= */
 /* =====================================================
    FONT SIZE BOOST — 100% TO 150% LARGER
    Keeps the existing ONROOMS design
 ===================================================== */
 
+
 /* NAVBAR */
+
 .navbar nav a {
     font-size: 17px;
 }
@@ -1184,6 +1172,7 @@ footer p {
 
 
 /* HERO */
+
 .small-title {
     font-size: 16px;
     letter-spacing: 4px;
@@ -1206,6 +1195,7 @@ footer p {
 
 
 /* FEATURES */
+
 .feature div {
     font-size: 38px;
 }
@@ -1220,6 +1210,7 @@ footer p {
 
 
 /* SHOP HEADING */
+
 .section-heading h2,
 .about h2,
 .contact h2 {
@@ -1232,6 +1223,7 @@ footer p {
 
 
 /* BIG OFFER TITLE */
+
 .BIG-title {
     font-size: clamp(50px, 6vw, 85px);
 
@@ -1246,6 +1238,7 @@ footer p {
 
 
 /* SEARCH + FILTER */
+
 .shop-controls input,
 .shop-controls select {
     font-size: 17px;
@@ -1259,6 +1252,7 @@ footer p {
 
 
 /* PRODUCTS */
+
 .product-info h3 {
     font-size: 25px;
 }
@@ -1280,12 +1274,14 @@ footer p {
 
 
 /* PRODUCT DESCRIPTION */
+
 .product-info {
     padding: 24px;
 }
 
 
 /* ABOUT */
+
 .about-content p:not(.small-title) {
     font-size: 18px;
 
@@ -1294,6 +1290,7 @@ footer p {
 
 
 /* CONTACT */
+
 .contact > p:not(.small-title) {
     font-size: 18px;
 
@@ -1302,12 +1299,14 @@ footer p {
 
 
 /* FOOTER */
+
 footer p {
     font-size: 16px;
 }
 
 
 /* CART */
+
 .cart-header h2 {
     font-size: 28px;
 }
@@ -1344,6 +1343,7 @@ footer p {
 
 
 /* PRODUCT POPUP */
+
 .product-detail h2 {
     font-size: clamp(45px, 6vw, 75px);
 }
@@ -1360,6 +1360,7 @@ footer p {
 
 
 /* CHECKOUT */
+
 .checkout-modal h2 {
     font-size: 42px;
 }
@@ -1382,6 +1383,7 @@ footer p {
 
 
 /* BADGES */
+
 .badge {
     font-size: 12px;
 
